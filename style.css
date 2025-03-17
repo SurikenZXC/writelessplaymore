@@ -1,0 +1,13 @@
+#isMissingRadio:checked ~ #additionalOptions {
+    display: block;
+}
+
+#isSingleRadio:checked ~ #genderContainer {
+    display: block;
+}
+#additionalOptions {
+    display: none;
+}
+#genderContainer {
+    display: none;
+}
