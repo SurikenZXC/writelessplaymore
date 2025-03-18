@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+            <div class="missingContainer">
+                <p>Відсутні?</p>
+                    <label for="">Так</label>
+                    <input value="1" id="isMissingRadio" name="missing" type="radio">
+                    <label for="">Ні</label>
+                    <input value="0" name="missing" type="radio">
+                <div id="additionalOptions">
+                    <p>Один?</p>
+                    <label for="">Так</label>
+                    <input value="1" id="isSingleRadio" name="single" type="radio">
+                    <label for="">Ні</label>
+                    <input value="0" name="single" type="radio">
+                    <div id="genderContainer">
+                        <p>Хто?</p>
+                        <label for="">Ч</label>
+                        <input value="Ч" name="gender" type="radio">
+                        <label for="">Ж</label>
+                        <input  value="Ж" name="gender" type="radio">
+                    </div>
+                    <br>
+                    <input id="namesInput" type="text" placeholder="Відсутні...">
+                </div>
+
+            </div>
+            <div class="themeContainer">
+                <input list="themes" id="myThemes" name="myThemes" />
+                <datalist id="themes">
+                </datalist>
+            </div>
+            <div class="dayContainer">
+                <input list="days" id="myDays" name="myDays" />
+                <datalist id="days">
+                    <option value="ПН"></option>
+                    <option value="ВТ"></option>
+                    <option value="СР"></option>
+                    <option value="ЧТ"></option>
+                    <option value="ПТ"></option>
+                    <option value="СБ"></option>
+                    <option value="НД"></option>
+                </datalist>
+            </div>
+            <button id="mainButton">GO</button>
+            <p style="white-space: pre-line;" id="mainText"></p>
+            <script src="script.js"></script>
+        </body>
+        </html>
