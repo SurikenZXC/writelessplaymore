@@ -33,12 +33,12 @@
 
             </div>
             <div class="themeContainer">
-                <input list="themes" id="myThemes" name="myThemes" />
+                <input list="themes" id="myThemes" name="myThemes" placeholder="Тема" />
                 <datalist id="themes">
                 </datalist>
             </div>
             <div class="dayContainer">
-                <input list="days" id="myDays" name="myDays" />
+                <input list="days" id="myDays" name="myDays" placeholder="День"/>
                 <datalist id="days">
                     <option value="ПН"></option>
                     <option value="ВТ"></option>
@@ -48,8 +48,10 @@
                     <option value="СБ"></option>
                     <option value="НД"></option>
                 </datalist>
+                <button id="todayButton" class="buttons">Сьогоднішній день</button>
+                <button id="yesterdayButton" class="buttons">Вчорашній день</button>
             </div>
-            <button id="mainButton">GO</button>
+            <button id="mainButton" class="buttons">GO</button>
             <p style="white-space: pre-line;" id="mainText"></p>
             <script src="script.js"></script>
         </body>

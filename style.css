@@ -97,7 +97,7 @@
     border-radius: 5px;
   }
   
-  button#mainButton {
+  .buttons {
     background: #3498db;
     color: white;
     border: none;
@@ -106,9 +106,10 @@
     cursor: pointer;
     border-radius: 5px;
     transition: 0.3s;
+    margin: 10px 0 10px 0;
   }
   
-  button#mainButton:hover {
+  .buttons {
     background: #2980b9;
   }
   input[type="text"] {

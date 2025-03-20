@@ -2,6 +2,18 @@ let mainText = document.getElementById("mainText")
 let namesInput = document.getElementById("namesInput")
 let myThemesInput = document.getElementById("myThemes")
 let myDaysInput = document.getElementById("myDays")
+let todayButton = document.getElementById("todayButton")
+let yesterdayButton = document.getElementById("yesterdayButton")
+
+let days = [
+    "НД",
+    "ПН" ,
+    "ВТ",
+    "СР",
+    "ЧТ" ,
+    "ПТ",
+    "СБ",
+]
 
 let allIsHere = `Усі були на уроці, молодці!`
 
@@ -1128,3 +1140,18 @@ function generateOptions(themes, datalistId) {
         datalist.appendChild(option);
     }
 }
+
+function todayButtonHandler(){
+    let date = new Date().getDay()
+    console.log(date)
+    myDaysInput.value = `${days[date]}`
+}
+
+function yesterdayButtonHandler(){
+    let date = new Date().getDay()-1 >= 0 ? new Date().getDay()-1  : 6
+    console.log(date)
+    myDaysInput.value = `${days[date]}`
+}
+
+todayButton.addEventListener("click", todayButtonHandler)
+yesterdayButton.addEventListener("click", yesterdayButtonHandler)
