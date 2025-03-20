@@ -119,3 +119,17 @@
     font-size: 1em;
     text-align: center;
   }
+  @media (max-width: 768px) {
+    body {
+        font-size: 1.2em;
+    }
+
+    .missingContainer, .themeContainer, .dayContainer {
+        width: 100%;
+    }
+
+    .buttons {
+        font-size: 1em;
+        padding: 12px;
+    }
+}

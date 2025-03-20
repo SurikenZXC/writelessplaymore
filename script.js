@@ -15,8 +15,6 @@ let days = [
     "СБ",
 ]
 
-let allIsHere = `Усі були на уроці, молодці!`
-
 let themes = {
     m1y1Web : `💡Вчора на занятті була пройдена тема: 
 Розмітка простих об'єктів на HTML
@@ -1143,13 +1141,11 @@ function generateOptions(themes, datalistId) {
 
 function todayButtonHandler(){
     let date = new Date().getDay()
-    console.log(date)
     myDaysInput.value = `${days[date]}`
 }
 
 function yesterdayButtonHandler(){
     let date = new Date().getDay()-1 >= 0 ? new Date().getDay()-1  : 6
-    console.log(date)
     myDaysInput.value = `${days[date]}`
 }
 
