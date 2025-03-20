@@ -127,6 +127,9 @@
     .missingContainer, .themeContainer, .dayContainer {
         width: 100%;
     }
+    #mainText{
+      max-width: 350px;
+    }
 
     .buttons {
         font-size: 1em;
