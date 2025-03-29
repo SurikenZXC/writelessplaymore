@@ -1150,4 +1150,17 @@ function yesterdayButtonHandler(){
 }
 
 todayButton.addEventListener("click", todayButtonHandler)
-yesterdayButton.addEventListener("click", yesterdayButtonHandler)
+// yesterdayButton.addEventListener("click", yesterdayButtonHandler)
+
+function resetInput(){
+    myDaysInput.value = ""
+    namesInput.value = ""
+    myThemesInput.value = ""
+    mainText.style.display = "none"
+    let radioButtons = document.querySelectorAll('input[type="radio"]');
+    radioButtons.forEach((radio) => {
+        radio.checked = false;
+    });
+}
+
+document.querySelector("#resetButton").addEventListener("click", resetInput);
