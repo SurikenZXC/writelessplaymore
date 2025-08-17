@@ -136,3 +136,79 @@
         padding: 12px;
     }
 }
+.courseContainer {
+  background: #a3c3e0;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.08);
+  margin-bottom: 15px;
+  width: 530px;
+  text-align: center;
+  font-size: 1em;
+  box-sizing: border-box;
+}
+
+.courseContainer p {
+  font-weight: bold;
+  margin-bottom: 10px;
+  margin-top: 0;
+}
+
+/* Стиль для селекта */
+#courseSelect {
+  width: 90%;
+  padding: 8px 36px 8px 12px; /* правий відступ для стрілки */
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: #fff;
+  font-size: 1em;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  transition: box-shadow .18s ease, border-color .18s ease;
+  text-align: center;
+}
+
+/* Візуальний індикатор фокусу */
+#courseSelect:focus {
+  outline: none;
+  border-color: #216ba5;
+  box-shadow: 0 0 0 3px rgba(33,107,165,0.12);
+}
+
+/* Стандартна "стрілка" для селекта (без зовнішніх файлів) */
+.courseContainer {
+  position: relative;
+}
+.courseContainer::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: calc(50% - 250px + 18px); /* підлаштовуємо під ширину контейнера 500px */
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  pointer-events: none;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid #333;
+  opacity: 0.7;
+}
+
+/* Падінг для мобілок — підлаштування */
+@media (max-width: 768px) {
+  .courseContainer,
+  .missingContainer,
+  .themeContainer,
+  .dayContainer {
+    width: 100%;
+  }
+  .courseContainer::after {
+    right: 18px; /* використаємо простіше для адаптиву */
+  }
+  #courseSelect {
+    padding-right: 36px;
+  }
+}

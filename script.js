@@ -997,8 +997,25 @@ m7y4Front: `💡Вчора на занятті була пройдена тем�
 -Кружечок №6 Опублікуй свій веб-додаток`
 }
 
-generateOptions(themes, "themes")
 
+let courseSelect = document.getElementById("courseSelect")
+
+// при зміні курсу — фільтруємо теми
+courseSelect.addEventListener("change", function() {
+    let selectedCourse = courseSelect.value;
+    if (!selectedCourse) {
+        generateOptions({}, "themes");
+        return;
+    }
+
+    let filteredThemes = {};
+    for (let key in themes) {
+        if (key.includes(selectedCourse)) {
+            filteredThemes[key] = themes[key];
+        }
+    }
+    generateOptions(filteredThemes, "themes");
+});
 let mainButton = document.getElementById("mainButton")
 
 mainButton.addEventListener("click", function(){
@@ -1086,6 +1103,11 @@ function checkIfEntered(){
         }
     }
 
+    if (!courseSelect.value) {
+        alert("Оберіть курс!");
+        return false;
+    }
+
     if (!myThemesInput.value) {
         alert("Оберіть тему!");
         return false;
@@ -1156,11 +1178,13 @@ function resetInput(){
     myDaysInput.value = ""
     namesInput.value = ""
     myThemesInput.value = ""
+    courseSelect.value = ""
     mainText.style.display = "none"
     let radioButtons = document.querySelectorAll('input[type="radio"]');
     radioButtons.forEach((radio) => {
         radio.checked = false;
     });
+    generateOptions({}, "themes")
 }
 
 document.querySelector("#resetButton").addEventListener("click", resetInput);

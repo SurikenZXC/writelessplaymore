@@ -8,52 +8,65 @@
     <title>Chill</title>
 </head>
 <body>
-            <div class="missingContainer">
-                <p>Відсутні?</p>
-                    <label for="">Так</label>
-                    <input value="1" id="isMissingRadio" name="missing" type="radio">
-                    <label for="">Ні</label>
-                    <input value="0" name="missing" type="radio">
-                <div id="additionalOptions">
-                    <p>Один?</p>
-                    <label for="">Так</label>
-                    <input value="1" id="isSingleRadio" name="single" type="radio">
-                    <label for="">Ні</label>
-                    <input value="0" name="single" type="radio">
-                    <div id="genderContainer">
-                        <p>Хто?</p>
-                        <label for="">Ч</label>
-                        <input value="Ч" name="gender" type="radio">
-                        <label for="">Ж</label>
-                        <input  value="Ж" name="gender" type="radio">
-                    </div>
-                    <br>
-                    <input id="namesInput" type="text" placeholder="Відсутні...">
-                </div>
+    <div class="missingContainer">
+        <p>Відсутні?</p>
+        <label for="">Так</label>
+        <input value="1" id="isMissingRadio" name="missing" type="radio">
+        <label for="">Ні</label>
+        <input value="0" name="missing" type="radio">
 
+        <div id="additionalOptions">
+            <p>Один?</p>
+            <label for="">Так</label>
+            <input value="1" id="isSingleRadio" name="single" type="radio">
+            <label for="">Ні</label>
+            <input value="0" name="single" type="radio">
+
+            <div id="genderContainer">
+                <p>Хто?</p>
+                <label for="">Ч</label>
+                <input value="Ч" name="gender" type="radio">
+                <label for="">Ж</label>
+                <input  value="Ж" name="gender" type="radio">
             </div>
-            <div class="themeContainer">
-                <input list="themes" id="myThemes" name="myThemes" placeholder="Тема" />
-                <datalist id="themes">
-                </datalist>
-            </div>
-            <div class="dayContainer">
-                <input list="days" id="myDays" name="myDays" placeholder="День"/>
-                <datalist id="days">
-                    <option value="ПН"></option>
-                    <option value="ВТ"></option>
-                    <option value="СР"></option>
-                    <option value="ЧТ"></option>
-                    <option value="ПТ"></option>
-                    <option value="СБ"></option>
-                    <option value="НД"></option>
-                </datalist>
-                <button id="todayButton" class="buttons">Сьогоднішній день</button>
-                <button id="resetButton" class="buttons">Прибрати усе</button>
-                <!-- <button id="yesterdayButton" class="buttons">Вчорашній день</button> -->
-            </div>
-            <button id="mainButton" class="buttons">GO</button>
-            <p style="white-space: pre-line;" id="mainText"></p>
-            <script src="script.js"></script>
-        </body>
-        </html>
+            <br>
+            <input id="namesInput" type="text" placeholder="Відсутні...">
+        </div>
+    </div>
+
+    <!-- выбор курса -->
+    <div class="courseContainer">
+        <p>Оберіть курс</p>
+        <select id="courseSelect">
+            <option value="">-- Виберіть курс --</option>
+            <option value="Web">Web</option>
+            <option value="Front">Frontend</option>
+        </select>
+    </div>
+
+    <div class="themeContainer">
+        <input list="themes" id="myThemes" name="myThemes" placeholder="Тема" />
+        <datalist id="themes"></datalist>
+    </div>
+
+    <div class="dayContainer">
+        <input list="days" id="myDays" name="myDays" placeholder="День"/>
+        <datalist id="days">
+            <option value="ПН"></option>
+            <option value="ВТ"></option>
+            <option value="СР"></option>
+            <option value="ЧТ"></option>
+            <option value="ПТ"></option>
+            <option value="СБ"></option>
+            <option value="НД"></option>
+        </datalist>
+        <button id="todayButton" class="buttons">Сьогоднішній день</button>
+        <button id="resetButton" class="buttons">Прибрати усе</button>
+    </div>
+
+    <button id="mainButton" class="buttons">GO</button>
+    <p style="white-space: pre-line;" id="mainText"></p>
+
+    <script src="script.js"></script>
+</body>
+</html>
